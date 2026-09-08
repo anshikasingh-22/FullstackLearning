@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .movie-card {
+            width: 195px;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            background-color: white;
+            overflow: hidden;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .movie-image {
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+        .movie-card:hover .movie-image img {
+            transform: scale(1.08);
+        }
+
+        .movie-info {
+            padding: 12px;
+        }
+
+        .movie-info h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .movie-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="heading">Top Hindi Movies Near You</h2>
+
+    <div class="card-container">
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg">
+            </div>
+
+            <div class="movie-info">
+                <h3>Hanuman Ansh</h3>
+                <p>U | Hindi</p>
+            </div>
+
+        </div>
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg">
+            </div>
+
+            <div class="movie-info">
+                <h3>Toxic</h3>
+                <p>U | Hindi</p>
+            </div>
+
+        </div>
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg">
+            </div>
+
+            <div class="movie-info">
+                <h3>Mirzapur</h3>
+                <p>U | Hindi</p>
+            </div>
+
+        </div>
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/AW_Poster-18591030-9548-11f1-b29d-8985d3d6c644.jpg">
+            </div>
+
+            <div class="movie-info">
+                <h3>Awarapan 2</h3>
+                <p>U | Hindi</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
