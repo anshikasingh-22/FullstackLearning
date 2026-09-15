@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: #f8f9fc;
             margin: 0;
             padding: 30px;
         }
@@ -18,32 +18,37 @@
 
         .card-container {
             display: flex;
-            gap: 20px;
+            gap: 22px;
             flex-wrap: wrap;
         }
 
         .movie-card {
-            width: 195px;
-            border: 1px solid #e5e7eb;
-            border-radius: 15px;
-            background-color: white;
+            width: 150px;
+            border-radius: 12px;
+            background-color: #ffffff;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+
+            animation: CardAnimation 1s ease-in-out;
         }
 
         .movie-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .movie-image {
+            width: 100%;
+            height: 200px;
             overflow: hidden;
         }
 
         .movie-image img {
             width: 100%;
-            height: 260px;
+            height: 100%;
             object-fit: cover;
             display: block;
 
@@ -51,23 +56,63 @@
         }
 
         .movie-card:hover .movie-image img {
-            transform: scale(1.08);
+            transform: scale(1.06);
         }
 
         .movie-info {
-            padding: 12px;
+            padding: 10px;
         }
 
         .movie-info h3 {
-            margin: 0;
-            font-size: 16px;
+            margin: 0 0 8px;
+            font-size: 14px;
             font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .movie-info p {
-            margin: 5px 0 0;
-            font-size: 14px;
+        /* Rating */
+        .rating {
+            font-size: 11px;
             color: #555;
+            margin-bottom: 9px;
+        }
+
+        .rating .star {
+            color: #d9534f;
+            font-size: 14px;
+        }
+
+        /* Book Now */
+        .book-btn {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+
+            background-color: #777;
+            color: white;
+
+            font-size: 11px;
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background-color: #444;
+        }
+
+        @keyframes CardAnimation {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
@@ -78,6 +123,7 @@
 
     <div class="card-container">
 
+        <!-- Hanuman -->
         <div class="movie-card">
 
             <div class="movie-image">
@@ -86,11 +132,21 @@
 
             <div class="movie-info">
                 <h3>Hanuman Ansh</h3>
-                <p>U | Hindi</p>
+
+                <div class="rating">
+                    <span class="star">★</span>
+                    9.0 | U | Hindi
+                </div>
+
+                <button class="book-btn">
+                    Book Now
+                </button>
             </div>
 
         </div>
 
+
+        <!-- Toxic -->
         <div class="movie-card">
 
             <div class="movie-image">
@@ -99,11 +155,21 @@
 
             <div class="movie-info">
                 <h3>Toxic</h3>
-                <p>U | Hindi</p>
+
+                <div class="rating">
+                    <span class="star">★</span>
+                    8.8 | U | Hindi
+                </div>
+
+                <button class="book-btn">
+                    Book Now
+                </button>
             </div>
 
         </div>
 
+
+        <!-- Mirzapur -->
         <div class="movie-card">
 
             <div class="movie-image">
@@ -111,12 +177,22 @@
             </div>
 
             <div class="movie-info">
-                <h3>Mirzapur</h3>
-                <p>U | Hindi</p>
+                <h3>Mirzapur: The Movie</h3>
+
+                <div class="rating">
+                    <span class="star">★</span>
+                    8.5 | A | Hindi
+                </div>
+
+                <button class="book-btn">
+                    Book Now
+                </button>
             </div>
 
         </div>
 
+
+        <!-- Awarapan 2 -->
         <div class="movie-card">
 
             <div class="movie-image">
@@ -125,7 +201,15 @@
 
             <div class="movie-info">
                 <h3>Awarapan 2</h3>
-                <p>U | Hindi</p>
+
+                <div class="rating">
+                    <span class="star">★</span>
+                    8.7 | U | Hindi
+                </div>
+
+                <button class="book-btn">
+                    Book Now
+                </button>
             </div>
 
         </div>
