@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration Form</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        form {
+            width: 300px;
+            background-color: rgb(247, 242, 236);
+            border: 1px solid rgb(186, 185, 185);
+            margin: 30px auto;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="file"],
+        select {
+            width: 100%;
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .iframe-container {
+            width: 600px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .iframe-container iframe {
+            width: 600px;
+            height: 450px;
+            border: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form action="/register" method="post">
+
+        <label for="fullName">Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter Name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email">
+
+        <label>Gender:</label>
+        <br>
+
+        <input type="radio" value="male" id="male" name="gender">
+        <label for="male">Male</label>
+
+        <input type="radio" value="female" id="female" name="gender">
+        <label for="female">Female</label>
+
+        <br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+
+        <label for="branch">Branch:</label>
+
+        <select name="branch" id="branch">
+            <option value="cse">CSE</option>
+            <option value="it">IT</option>
+            <option value="ece">ECE</option>
+        </select>
+
+        <label>Select Skills:</label>
+        <br>
+
+        <input type="checkbox" id="java" name="skills" value="java">
+        <label for="java">Java</label>
+
+        <input type="checkbox" id="javascript" name="skills" value="javascript">
+        <label for="javascript">Javascript</label>
+
+        <br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+    <div class="iframe-container">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14143.189798830726!2d77.59493526561342!3d27.599808635902104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39736ce47bffc039%3A0xfe5fc3da92c6341!2sGLA%20University!5e0!3m2!1sen!2sin!4v1787220088618!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+
+    </div>
+
+</body>
+
+</html>
