@@ -16,3 +16,19 @@ console.log(typeof score)
 console.log(typeof email)
 console.log(typeof temperature)
 console.log(typeof isLoggedIn)
+
+let city=["Mathura","Agra","Varansi"]
+
+let userInfo={
+    name:"anshika",
+    address:"Mathura",
+    socialHandle:{
+        fb:"https://fb.com",
+        insta:"https://insta.com"
+    }
+}
+console.log(obj.name)
+
+function myFunction(){
+    console.log("Hello I am Anshika")
+}
