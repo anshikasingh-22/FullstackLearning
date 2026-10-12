@@ -15,9 +15,3 @@ console.log(403-"203") //200
 console.log(2*"5") //10
 
 //implicit and explicit type conversion
-
-/*
-Task: Calculate Booking amount of movie tickets
-1. if ticket quantity > 3 then apply discount of 50 rupees
-2. Age should be > 18.
-*/
