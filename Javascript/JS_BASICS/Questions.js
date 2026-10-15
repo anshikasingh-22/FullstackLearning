@@ -12,6 +12,6 @@ create a student profile object with the following properties
 4. gender
 5. course enrolled
 6. branch 
-using for in and for of loop print the values and keys of the object
+using for in and for of loop print the values and keys of the object.
 use nested object to create a address object where required.
 */

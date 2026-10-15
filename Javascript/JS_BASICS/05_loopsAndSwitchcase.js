@@ -3,14 +3,15 @@
 // switch(category){
 //     case "Action":
 //         console.log("this is a action movie..")
+//          break
 //     case "Comedy":
 //         console.log("this is a comedy movie..")
+//          break
 //     case "Drama":
 //         console.log("this is a drama movie..")
-        
+//           break
 //         default:
 //         console.log("No category is selected")
-
         
 // }
 
@@ -43,3 +44,4 @@ branch.newBranch="AIML"
 for(const b in branch){
     console.log(b); // It iterated over objects keys
 }
+
