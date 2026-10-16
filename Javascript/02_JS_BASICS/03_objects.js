@@ -3,7 +3,7 @@ const person1={
     email:"user@gmail.com",
     age:20,
     subscriptions:{
-        netflix:"Gold"
+        netflix:"Gold",
         amazonPrime:"basic"
     }
 }
