@@ -4,14 +4,14 @@
 
 // -customerName, movieName, ticketPrice, and quantity
 const booking = {
-    customerName: "Kashish",
+    customerName: "Anshika",
     movieName: "Avengers",
     ticketPrice: 200,
     quantity: 3,
 
 // -A nested customer object with email and city 
 customer: {
-        email: "kashish@gmail.com",
+        email: "anshika@gmail.com",
         city: "Mathura"
     },
 
