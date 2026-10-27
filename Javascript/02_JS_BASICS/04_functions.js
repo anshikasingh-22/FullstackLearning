@@ -27,4 +27,4 @@ const products=[
     { name: "Bread", price:40, inStock:false },
     { name: "Rice", price:200, inStock:true },
     { name: "Cheese", price:150, inStock:true }
-];
+];     
