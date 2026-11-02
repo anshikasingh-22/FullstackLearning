@@ -1,30 +1,47 @@
-// callback functions
+// // callback functions
 
-function calc(num1, num2, callback){
-    return callback(num1, num2);
-}
-function add(num1,num2){
-    return num1+num2;
-}
-console.log(calc(2,4, add))
+// function calc(num1, num2, callback){
+//     return callback(num1, num2);
+// }
+// function add(num1,num2){
+//     return num1+num2;
+// }
+// console.log(calc(2,4, add))
 
 
-const numbers= [1,2,3,4,5,6]
+// const numbers= [1,2,3,4,5,6]
 
-const multiples= numbers.map(()=>num*2)
+// const multiples= numbers.map(()=>num*2)
 
-console.log("multiples",multiples)
-// console.log(numbers)
+// console.log("multiples",multiples)
+// // console.log(numbers)
 
-const oddNumbers=numbers.filter((num)=>num%2!=0)
-console.log(oddNumbers)
+// const oddNumbers=numbers.filter((num)=>num%2!=0)
+// console.log(oddNumbers)
 
-const sumOfNumers=numbers.reduce((acc, num)=>acc+num)
-console.log(sumOfNumers) 
+// const sumOfNumers=numbers.reduce((acc, num)=>acc+num)
+// console.log(sumOfNumers) 
  
-const products=[
-    { name: "Milk", price:60, inStock:true },
-    { name: "Bread", price:40, inStock:false },
-    { name: "Rice", price:200, inStock:true },
-    { name: "Cheese", price:150, inStock:true }
-];     
+// const products=[
+//     { name: "Milk", price:60, inStock:true },
+//     { name: "Bread", price:40, inStock:false },
+//     { name: "Rice", price:200, inStock:true },
+//     { name: "Cheese", price:150, inStock:true }
+// ];     
+
+
+// regular function
+function printUserDetails(){
+    console.log("user data is fetched")
+}
+printUserDetails()
+
+
+//Arrow function
+const printUserDetails=()=>{
+    console.log("user data is fetched")
+}
+console.log(printUserDetails())
+
+//anonymous function
+

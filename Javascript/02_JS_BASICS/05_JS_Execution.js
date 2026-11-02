@@ -1,4 +1,4 @@
-// let val1 = 10;
+     // let val1 = 10;
 
 // let val2 = 20;
 
@@ -20,3 +20,4 @@ setTimeout(()=> {
 console.log("I an task2")
 
 Promise.resolve().then(()=>console.log("I am promise"))
+ 
