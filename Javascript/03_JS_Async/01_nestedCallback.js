@@ -9,7 +9,7 @@ function makePayment(){
     setTimeout(()=>{
         console.log("2. Payment is done")
         callback()
-    }, 2000)
+    }, 1000)
 }
 
 function orderConfirmed(){
