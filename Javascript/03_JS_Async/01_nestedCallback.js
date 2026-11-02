@@ -1,0 +1,37 @@
+function placeOrder(){
+    setTimeout(()=>{
+        console.log("1. Order is placed")
+        callback()
+    }, 1000)
+}
+
+function makePayment(){
+    setTimeout(()=>{
+        console.log("2. Payment is done")
+        callback()
+    }, 2000)
+}
+
+function orderConfirmed(){
+    setTimeout(()=>{
+        console.log("3. Order is confirmed")
+         callback()
+    }, 1000)
+}
+
+function assignDeliveryPartner(){
+    setTimeout(()=>{
+        console.log("4. Delivery partner assigned")
+        return callback()
+    }, 1000)
+}
+
+placeOrder(function(){
+    makePayment(function(){
+        orderConfirmed(function(){
+            assignDeliveryPartner(
+                console.log("5. Order is delivered")
+            )
+        })
+    })
+})
