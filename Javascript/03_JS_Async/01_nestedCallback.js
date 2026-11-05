@@ -1,28 +1,27 @@
-function placeOrder(){
+function placeOrder(callback){
     setTimeout(()=>{
         console.log("1. Order is placed")
-        callback()
+        return callback()
     }, 1000)
 }
 
-function makePayment(){
+function makePayment(callback){
     setTimeout(()=>{
         console.log("2. Payment is done")
-        callback()
+        return callback()
     }, 1000)
 }
 
-function orderConfirmed(){
+function orderConfirmed(callback){
     setTimeout(()=>{
         console.log("3. Order is confirmed")
-         callback()
+        return callback()
     }, 1000)
 }
 
 function assignDeliveryPartner(){
     setTimeout(()=>{
         console.log("4. Delivery partner assigned")
-        return callback()
     }, 1000)
 }
 
