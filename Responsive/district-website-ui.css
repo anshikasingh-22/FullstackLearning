@@ -1,0 +1,394 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eae5ff;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    min-height: 115px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 195px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo-text {
+    font-size: 43px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #111;
+    line-height: 35px;
+    font-family: Impact, Arial, sans-serif;
+}
+
+.logo-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.logo-divider {
+    height: 48px;
+    width: 2px;
+    background-color: #e5e5e5;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.location-icon {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #6845e8;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+.location-icon::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 2px solid #6845e8;
+    border-radius: 50%;
+    top: 7px;
+    left: 7px;
+}
+
+.location-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.city {
+    font-size: 22px;
+    font-weight: 700;
+    color: #242424;
+}
+
+.state {
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+}
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #555;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 16px 15px;
+    border-radius: 35px;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    color: #3f278f;
+    background-color: #eee8ff;
+}
+
+.nav-item.active {
+    color: #30206f;
+    background-color: #e8defe;
+}
+
+/* SEARCH */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px 0;
+}
+
+.search-container input {
+    width: 400px;
+    max-width: 100%;
+    padding: 13px 18px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-container input:focus {
+    border-color: #6845e8;
+    box-shadow: 0 0 5px #6845e8;
+}
+
+/* MOVIE CARDS */
+
+.cards-container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.movie-card {
+    width: 230px;
+    border: 1px solid #00000014;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    animation: cardAppear 0.6s ease forwards;
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.movie-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.movie-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.movie-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.movie-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.movie-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.movie-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.movie-image {
+    overflow: hidden;
+}
+
+.movie-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.movie-card:hover .movie-image img {
+    transform: scale(1.08);
+}
+
+/* MOVIE INFORMATION */
+
+.movie-info {
+    padding: 12px;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.movie-details {
+    color: #545459;
+}
+
+/* TOOLTIP */
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* BOOK BUTTON */
+
+.book-btn {
+    height: 35px;
+    width: 100px;
+    margin: 0 12px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #545459;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.book-btn:hover {
+    transform: scale(1.08);
+    background-color: #222;
+}
+
+/* NO MOVIES */
+
+#noMovies {
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    padding-bottom: 30px;
+}
+
+/* BOOKING NOTIFICATION */
+
+.notification {
+    position: fixed;
+    top: 135px;
+    right: 25px;
+    padding: 15px 20px;
+    background-color: rgb(16, 183, 16);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 2000;
+}
+
+.notification.show {
+    display: block;
+    animation: notificationSlide 0.5s ease;
+}
+
+@keyframes notificationSlide {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .location {
+        min-width: 150px;
+    }
+
+    .nav-item {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        height: auto;
+        min-height: 100px;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .location {
+        min-width: auto;
+    }
+
+    .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 230px);
+    }
+}
+
+@media (max-width: 550px) {
+    .cards-container {
+        grid-template-columns: 230px;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .location {
+        display: none;
+    }
+}
